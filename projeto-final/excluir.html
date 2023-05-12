@@ -1,0 +1,59 @@
+<!-- Lista de notas cadastradas com opção para excluir notas -->
+<html>
+
+<head>
+  <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Inclua o Bootstrap aqui -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+            integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+            integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="estilo.css">
+        <script>
+            $("#icones").load("icones.html");
+        </script>
+
+
+  <script>
+    // Seleciona todos os botões de excluir
+    const btnsExcluir = document.querySelectorAll('.btn-excluir');
+    // Adiciona um listener de clique a cada um
+    btnsExcluir.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Encontra o elemento da nota correspondente ao botão
+        const nota = btn.closest('.nota');
+        // Remove a nota da lista
+        nota.remove();
+      });
+    });
+  </script>
+
+</script>
+<div class="ex">
+    <a href="index.html">Voltar</a>
+    <h3>Lista de Notas Cadastradas </h3>
+
+    <div class="col-md-6">
+  <!-- Lista de notas existentes -->
+  <ul id="lista-notas" class="list-group"></ul>
+</div>
+
+    </div>
+</head>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="funcoes.js"></script>
+<script>
+    carregar_notas();
+</script>
+</body>
+
+</html>

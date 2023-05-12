@@ -1,0 +1,21 @@
+/* CSS do da página */
+/* CSS do da página */
+.btn{
+    background-color  : blue;
+  }
+    .ex{
+      height: 480px;
+      width: 500px;
+      background-color: rgb(192, 230, 255);
+      border-radius: 3%;
+      text-align: -webkit-certer;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-40%,-50%);
+      padding-left: 10px;
+      padding-right: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+  
